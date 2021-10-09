@@ -7,7 +7,7 @@ const graphQLResolvers = require('./graphql/resolvers');
 const isAuth = require('./middleware/is-auth');
 
 const app = express();
-const PORT = 4000 || process.env.PORT;
+const PORT = process.env.PORT || 4000;
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
