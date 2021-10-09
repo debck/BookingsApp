@@ -21,7 +21,9 @@ app.use((req, res, next) => {
 });
 
 app.use(isAuth);
-
+app.get('/', (req,res) => {
+    res.send("Hello, Server deployed..")
+})
 app.use('/graphql', graphqlHTTP({
     schema: graphQLSchema,
     rootValue: graphQLResolvers,
